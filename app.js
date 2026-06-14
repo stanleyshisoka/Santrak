@@ -35,6 +35,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Scroll-reveal animation
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                revealObserver.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
     // Form submission feedback
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
