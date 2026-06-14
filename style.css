@@ -136,6 +136,96 @@ nav {
     color: var(--primary-color);
 }
 
+/* About Section */
+.about {
+    padding: 100px 0;
+    background-color: #f1f5f9;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.image-box {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.contact-form .cta-button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
 /* Footer */
 footer {
     background: #1e293b;
@@ -177,7 +267,7 @@ footer {
     }
 
     .nav-links li {
-        margin: 2.5rem 0;
+        margin: 1.5rem 0;
     }
 
     .menu-toggle {
@@ -197,6 +287,15 @@ footer {
     }
 
     .hero h1 {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text h2 {
         font-size: 2rem;
     }
 }
